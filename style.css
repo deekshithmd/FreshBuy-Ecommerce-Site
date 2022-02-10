@@ -1,7 +1,5 @@
 @import url("https://temp-ui.netlify.app/style.css");
 @import url(index.css);
-@import url(ecommerce/pages/authentication/login.css);
-@import url(ecommerce/pages/productlist/product.css);
 
 :root{
     --dark-white-background: #615f5f;
