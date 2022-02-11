@@ -1,8 +1,12 @@
 @import url("https://temp-ui.netlify.app/style.css");
+@import url(FreshBuy/pages/cart/cart.css);
+@import url(FreshBuy/pages/productlist/product.css);
+@import url(FreshBuy/pages/wishlist/wishlist.css);
 @import url(index.css);
 
 :root{
     --dark-white-background: #615f5f;
+    --white-backgtround:#ffff;
 }
 
 *{

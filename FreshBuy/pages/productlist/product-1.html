@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Product listing</title>
+</head>
+<body>
+    <div class="grid-container-product">
+        <nav class="navigation-bar">
+            <section class="brand logo">
+                    <a href="../../../index.html" >
+                        <img src="../../assets/brand-logo/freshbuy-logo.png" alt="logo">
+                    </a>
+            </section>
+            <section class="search-item">
+                <div class="input search-field outlined ">
+                    <button class="search-icon"><i class="fa fa-search"></i></button>
+                    <input type="text" name="username" placeholder="Search here...">
+                </div>
+            </section>
+            <ul class="list-style-none account-data">
+                <li class="list-inline-item">
+                    <a href="../authentication/login.html"class="btn btn-solid-primary link-btn">Login</a>
+                </li>
+                <li class="list-inline-item">
+                    <div class="avatar avatar-text-xs avatar-text img-round user-profile" role="img" alt="Avatar">AB</div>
+                </li>
+                <li class="list-inline-item">
+                    <button class="badge-container badge-btn">
+                        <a href="../wishlist/wishlist.html">
+                            <i class="fas fa-heart icon"></i>
+                            <span class="status-badge-icon bg-red">5</span>
+                        </a> 
+                    </button>
+                </li>
+                <li class="list-inline-item">
+                    <button class="badge-container badge-btn">
+                        <a href="../cart/cart.html">
+                            <i class="fas fa-cart-shopping"></i>
+                            <span class="status-badge-icon bg-red">3</span> 
+                        </a>
+                    </button>
+                </li>
+                <li class="list-inline-item">
+                    <button class="btn btn-icon-primary user-signout">
+                        <a href="../../../index.html">
+                            <i class="fa fa-sign-out fa-2x"></i>
+                        </a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <!--Filter section-->
+        <div class="filter-section">
+            <section class="filter-headings">
+                <p class="text-3xl text-bold">Filters</p>
+                <button class="btn btn-solid-primary clear-filter">Clear</button>
+            </section>
+            <p class="text-2xl text-bold">Price</p>
+            <div class="range-slider">
+                <input type="range" name="price" id="price" min="0" max="1000" value="0" onchange="rangeSlide(this.value)">
+                <span class="range-value text-2xl text-bold margin-l">0</span>
+            </div>
+            <p class="text-2xl text-bold">Categories</p>
+            <label for="leafy-green" class="text-xl">
+                <input type="checkbox" name="leafy-green" class="margin-r">
+                Leafy green
+            </label>
+            <label for="marrow" class="text-xl">
+                <input type="checkbox" name="marrow" class="margin-r">
+                Marrow
+            </label>
+            <label for="root" class="text-xl">
+                <input type="checkbox" name="root" class="margin-r">
+                Root
+            </label>
+            <label for="allium" class="text-xl">
+                <input type="checkbox" name="allium" class="margin-r">
+                Allium
+            </label>
+            <label for="cruciferous" class="text-xl">
+                <input type="checkbox" name="cruciferous" class="margin-r">
+                Cruciferous
+            </label>
+            <label for="fruits" class="text-xl">
+                <input type="checkbox" name="fruits" class="margin-r">
+                Fruits
+            </label>
+            <p class="text-2xl text-bold">Ratings</p>
+            <label for="rating" class="text-xl">
+                <input type="radio" name="rating" class="margin-r">
+                4 Stars & above
+            </label>
+            <label for="rating" class="text-xl">
+                <input type="radio" name="rating" class="margin-r">
+                3 Stars & above
+            </label>
+            <label for="rating" class="text-xl">
+                <input type="radio" name="rating" class="margin-r">
+                2 Stars & above
+            </label>
+            <label for="rating" class="text-xl">
+                <input type="radio" name="rating" class="margin-r">
+                1 Star & above
+            </label>
+            <p class="text-2xl text-bold">Sort By</p>
+            <label for="sort" class="text-xl">
+                <input type="radio" name="sort" class="margin-r">
+                Popularity
+            </label>
+            <label for="sort" class="text-xl">
+                <input type="radio" name="sort" class="margin-r">
+                Price Low-High
+            </label>
+            <label for="sort" class="text-xl">
+                <input type="radio" name="sort" class="margin-r">
+                Price High-Low
+            </label>
+        </div>
+        <div class="product-list">
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/apple.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Apple<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh apple from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.120 <span class="original-price text-strike-through">Rs.150</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/avacado.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Avacado<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh avacado from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.2<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.100 <span class="original-price text-strike-through">Rs.130</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Go to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/banana.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Banana<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh banana from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.4<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.50 <span class="original-price text-strike-through">Rs.80</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/dragon-fruit.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Dragon Fruit<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh fruit from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.5<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.150 <span class="original-price text-strike-through">Rs.180</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/grape.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Grape<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh grape from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.1<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.100 <span class="original-price text-strike-through">Rs.110</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/kivi.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Kivi<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh kivi from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.7<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.200 <span class="original-price text-strike-through">Rs.250</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/papaya.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Papaya<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh papaya from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.2<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.60 <span class="original-price text-strike-through">Rs.80</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/pomogranet.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Apple<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh apple from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.120 <span class="original-price text-strike-through">Rs.150</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/pinapple.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Pinapple<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh pinapple from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.90 <span class="original-price text-strike-through">Rs.110</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/stawberry.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Strawberry<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh fruit from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.2<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.200 <span class="original-price text-strike-through">Rs.250</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/fruits/watermelon.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Watermelon<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh watermelon from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.4<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.30 <span class="original-price text-strike-through">Rs.50</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/allium/chive.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Chive<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh chive from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.50 <span class="original-price text-strike-through">Rs.70</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Go to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/allium/garlic.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Garlic<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh garlic from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.5<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.100 <span class="original-price text-strike-through">Rs.120</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom max-height-card-img">
+                    <img src="../../assets/images/allium/onion.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Onion<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh onion from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.6<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.90 <span class="original-price text-strike-through">Rs.110</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/allium/shallot.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Shallot<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh shallots from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.1<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.95 <span class="original-price text-strike-through">Rs.100</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/cruciferous/brocolli.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Brocolli<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh brocolli from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.80 <span class="original-price text-strike-through">Rs.100</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/cruciferous/brucel.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Brucells<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh brucells from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.90 <span class="original-price text-strike-through">Rs.110</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/cruciferous/cabbage.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Cabbage<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh cabbage from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.40 <span class="original-price text-strike-through">Rs.50</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/cruciferous/cualiflower.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Cualiflower<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh cualiflower from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.60 <span class="original-price text-strike-through">Rs.70</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Go to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/leafy green/coriender-leaf.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Coriender Leaves<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh leaves from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.20 <span class="original-price text-strike-through">Rs.30</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/leafy green/curry-leaf.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Curry Leaves<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh leaves from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.20 <span class="original-price text-strike-through">Rs.30</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Go to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/leafy green/mint.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Mint Leaves<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh mint from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.1<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.10 <span class="original-price text-strike-through">Rs.20</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/leafy green/silverbeet.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Silver Beet<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh silverbeet</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.5<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.15 <span class="original-price text-strike-through">Rs.20</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/marrow/cucumber.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Cucumber<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Cucumber from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.6<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.30 <span class="original-price text-strike-through">Rs.40</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/marrow/pumpkin.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Pumpkin<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh pumpkin from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.6<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.40 <span class="original-price text-strike-through">Rs.50</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/root/beetroot.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Beetroot<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh beetroot from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.7<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.50 <span class="original-price text-strike-through">Rs.60</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Go to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/root/carrot.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Carrot<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh carrot from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.7<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.40 <span class="original-price text-strike-through">Rs.60</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+            <div class="card-container vertical">
+                <div class="card-img vertical-img border-bottom">
+                    <img src="../../assets/images/root/potato.png" alt="Apple">
+                </div>
+                <div class="card-details card-details-vertical">
+                    <h2 class="card-heading">Potato<span><i class="far fa-heart"></i></span></h2>
+                    <p class="card-sub-heading">Fresh potato from farm</p>
+                    <div class="rating text-lg">
+                        <span class="rating-value">4.7<i class="fa fa-star checked margin-l"></i></span>
+                        (<span class="rating-number">2333</span>)
+                    </div>
+                    <h4 class="product-price">Rs.25 <span class="original-price text-strike-through">Rs.35</span><span class="discount-percentage">20% off</span></h4>
+                    <button class="btn btn-icon-text-primary-outline"><span class="btn-icon"><i class="fa fa-shopping-basket margin-r"></i></span>Add to Basket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="product.js"></script>
+</body>
+</html>

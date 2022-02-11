@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>FreshBuy</title>
+</head>
+<body>
+    <div class="grid-container">
+        <nav class="navigation-bar">
+            <section class="brand logo">
+                    <a href="../../../index.html" >
+                        <img src="../../assets/brand-logo/freshbuy-logo.png" alt="logo">
+                    </a>
+            </section>
+            <section class="search-item">
+                <div class="input search-field outlined ">
+                    <button class="search-icon"><i class="fa fa-search"></i></button>
+                    <input type="text" name="username" placeholder="Search here...">
+                </div>
+            </section>
+            <ul class="list-style-none account-data">
+                <li class="list-inline-item">
+                    <a href="../authentication/login.html"class="btn btn-solid-primary link-btn">Login</a>
+                </li>
+                <li class="list-inline-item">
+                    <div class="avatar avatar-text-xs avatar-text img-round user-profile" role="img" alt="Avatar">AB</div>
+                </li>
+                <li class="list-inline-item">
+                    <button class="badge-container badge-btn">
+                        <a href="../wishlist/wishlist.html">
+                            <i class="fas fa-heart icon"></i>
+                            <span class="status-badge-icon bg-red">5</span>
+                        </a> 
+                    </button>
+                </li>
+                <li class="list-inline-item">
+                    <button class="badge-container badge-btn">
+                        <a href="../cart/cart.html">
+                            <i class="fas fa-cart-shopping"></i>
+                            <span class="status-badge-icon bg-red">3</span> 
+                        </a>
+                    </button>
+                </li>
+                <li class="list-inline-item">
+                    <button class="btn btn-icon-primary user-signout">
+                        <a href="../../../index.html">
+                            <i class="fa fa-sign-out fa-2x"></i>
+                        </a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="cart-products">
+            <section class="cart-items">
+                <p class="product-page-heading text-3xl text-bold"><span class="no-items-in-cart">3</span> Products in your Basket<p></p>
+                <div class="card-container horizontal">
+                    <div class="card-img horizontal-img border-right">
+                        <img src="../../assets/images/allium/garlic.png" alt="Apple">
+                    </div>
+                    <div class="card-details card-details-horizontal">
+                        <h2 class="card-heading">Garlic</h2>
+                        <p class="card-sub-heading">Fresh garlic from farm</p>
+                        <div class="rating text-lg">
+                            <span class="rating-value">4.2<i class="fa fa-star checked margin-l"></i></span>
+                            (<span class="rating-number">2333</span>)
+                        </div>
+                        <h4 class="product-price">Rs.60 <span class="original-price text-strike-through">Rs.70</span><span class="discount-percentage">20% off</span></h4>
+                        <span class="qty-scale text-xl">Quantity:
+                            <button class="inc">+</button>
+                            <input type="number" id="qty" readonly="" value="0">
+                            <button class="dec">-</button>
+                        </span>
+                        <button class="btn btn-solid-primary" >Move to Wishlist</button>
+                        <button class="btn btn-outline-primary" >Remove</button>
+                    </div>
+                </div>
+                <div class="card-container horizontal">
+                    <div class="card-img horizontal-img border-right">
+                        <img src="../../assets/images/root/ginger.png" alt="Apple">
+                    </div>
+                    <div class="card-details card-details-horizontal">
+                        <h2 class="card-heading">Ginger<span><i class="far fa-heart"></i></span></h2>
+                        <p class="card-sub-heading">Fresh apple from farm</p>
+                        <div class="rating text-lg">
+                            <span class="rating-value">4.5<i class="fa fa-star checked margin-l"></i></span>
+                            (<span class="rating-number">2333</span>)
+                        </div>
+                        <h4 class="product-price">Rs.50 <span class="original-price text-strike-through">Rs.60</span><span class="discount-percentage">20% off</span></h4>
+                        <span class="qty-scale text-xl">Quantity:
+                            <button class="inc">+</button>
+                            <input type="number" id="qty" readonly="" value="0">
+                            <button class="dec">-</button>
+                        </span>
+                        <button class="btn btn-solid-primary" >Move to Wishlist</button>
+                        <button class="btn btn-outline-primary" >Remove</button>
+                    </div>
+                </div>
+                <div class="card-container horizontal">
+                    <div class="card-img horizontal-img border-right">
+                        <img src="../../assets/images/fruits/orange.png" alt="Apple">
+                    </div>
+                    <div class="card-details card-details-horizontal">
+                        <h2 class="card-heading">Orange<span><i class="far fa-heart"></i></span></h2>
+                        <p class="card-sub-heading">Fresh orange from farm</p>
+                        <div class="rating text-lg">
+                            <span class="rating-value">4.3<i class="fa fa-star checked margin-l"></i></span>
+                            (<span class="rating-number">2333</span>)
+                        </div>
+                        <h4 class="product-price">Rs.100 <span class="original-price text-strike-through">Rs.110</span><span class="discount-percentage">20% off</span></h4>
+                        <span class="qty-scale text-xl">Quantity:
+                            <button class="inc">+</button>
+                            <input type="number" id="qty" readonly="" value="0">
+                            <button class="dec">-</button>
+                        </span>
+                        <button class="btn btn-solid-primary" >Move to Wishlist</button>
+                        <button class="btn btn-outline-primary" >Remove</button>
+                    </div>
+                </div>
+            </section>
+            <section class="item-data margin-t">
+                <h3 class="text-3xl">Price Details</h3>
+                <hr>
+                <p>Price <span class="rate">Rs.210</span></p>
+                <p>Discount <span class="rate">-Rs.20</span></p>
+                <p>Delivery Charge <span class="rate">Rs.40</span></p>
+                <hr>
+                <h3 class="text-2xl">Total Amount <span class="rate">Rs.230</span></h3>
+                <hr>
+                <p>You will save Rs.20 on this order</p>
+                <button class="btn btn-outline-primary margin-t" >Place Order</button>
+            </section>
+        </div>
+    </div>
+    <script>
+        const qty = document.querySelector("#qty");
+        const inc=document.querySelector(".inc")
+        const dec= document.querySelector(".dec");
+        inc.addEventListener('click', ()=>{
+            qty.value=parseInt(qty.value)+1;
+        })
+        dec.addEventListener('click', ()=>{
+            if(qty.value<=0)
+                qty.value=0;
+            else
+                qty.value=parseInt(qty.value)-1;
+        })
+    </script>
+</body>
+</html>
