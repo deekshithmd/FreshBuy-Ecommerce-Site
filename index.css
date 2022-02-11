@@ -15,10 +15,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 8rem;
     align-items: center;
     background-color: var(--light-black-background);
-    width: 100vw;
+    width: 100%;
 }
 
 .logo img{
@@ -29,7 +28,7 @@
 
 .search-field{
     border-radius: 5px;
-    width: 25vw;
+    width: 40rem;
 }
 
 .search-item input{
@@ -49,7 +48,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 25vw;
+    width: 40rem;
 }
 
 .account-data a{
@@ -95,10 +94,10 @@
 }
 
 .product-banner{
-    width: 98vw;
+    position: relative;
+    width: 98%;
     max-height: 60vh;
     margin: 30px auto;
-    position: relative;
     overflow: hidden;
     padding: 0;
 }
