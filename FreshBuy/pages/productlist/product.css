@@ -5,13 +5,13 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
         'nav-bar nav-bar nav-bar nav-bar nav-bar '
-        'filter main-p main-p main-p main-p'
+        'filter main-product main-product main-product main-product'
 }
 
 .filter-section{
+    grid-area: filter;
     position: sticky;
     top: 0;
-    grid-area: filter;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -34,7 +34,7 @@
 }
 
 .product-list{
-    grid-area: main-p;
+    grid-area: main-product;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

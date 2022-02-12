@@ -4,10 +4,8 @@
 }
 
 .cart-items{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     width: 50rem;
     background-color: var(--white-backgtround);
     margin: 10px;
