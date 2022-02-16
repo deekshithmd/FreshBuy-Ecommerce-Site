@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-around;
     width: fit-content;
-    height: 30rem;
+    height: fit-content;
     background-color: var(--white-backgtround);
     padding: 2rem;
     border-radius: 10px;
