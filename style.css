@@ -1,7 +1,8 @@
-@import url("https://temp-ui.netlify.app/style.css");
+@import url("https://fresh-ui.netlify.app/style.css");
 @import url(FreshBuy/pages/cart/cart.css);
 @import url(FreshBuy/pages/productlist/product.css);
 @import url(FreshBuy/pages/wishlist/wishlist.css);
+@import url(freshbuy/pages/authentication/authentication.css);
 @import url(index.css);
 
 :root{
