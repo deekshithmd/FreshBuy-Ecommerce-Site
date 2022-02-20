@@ -12,9 +12,10 @@
     justify-content: space-around;
     width: fit-content;
     height: fit-content;
-    background-color: var(--white-backgtround);
+    background-color: var(--background-color);
     padding: 2rem;
     border-radius: 10px;
+    border: 1px solid var(--primary-color);
 }
 
 .handle{
