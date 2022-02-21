@@ -1,4 +1,5 @@
 const wishlist = document.querySelector(".wishlisted")
+
 wishlist.addEventListener('click',function(){
     if(wishlist.classList.contains('far')){
         wishlist.classList.remove('far');
