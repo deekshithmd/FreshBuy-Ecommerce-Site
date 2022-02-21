@@ -24,7 +24,7 @@ For all pages in the website links provided from homepage
 3. Click on heart icon to go to whishlist page <br> or Follow this link: [https://freshbuy.netlify.app/freshbuy/pages/wishlist/wishlist.html](https://freshbuy.netlify.app/freshbuy/pages/wishlist/wishlist.html)
 4. Click on cart icon to go to cart page <br> or Follow this link: [https://freshbuy.netlify.app/freshbuy/pages/cart/cart.html](https://freshbuy.netlify.app/freshbuy/pages/cart/cart.html)
 5. Click on logo to go to home page <br> or Follow this link: [https://freshbuy.netlify.app/index.html](https://freshbuy.netlify.app/index.html)
-6. Click on category items on homepage to see product list done using vertical cards and horizontal cards or Follow these links:<br>1. [https://freshbuy.netlify.app/freshbuy/pages/productlist/product-1.html](https://freshbuy.netlify.app/freshbuy/pages/productlist/product-1.html) 2.[https://freshbuy.netlify.app/freshbuy/pages/productlist/product-2.html](https://freshbuy.netlify.app/freshbuy/pages/productlist/product-2.html)
+6. Click on category items on homepage to see product list done using vertical cards and horizontal cards or Follow these links:<br>1. [https://freshbuy.netlify.app/freshbuy/pages/productlist/product-1.html](https://freshbuy.netlify.app/freshbuy/pages/productlist/product-1.html)<br>2.  [https://freshbuy.netlify.app/freshbuy/pages/productlist/product-2.html](https://freshbuy.netlify.app/freshbuy/pages/productlist/product-2.html)
 7. Filters provided in product listing page
 8. To toggle between dark and light theme icon provided in home page only
 9. On clicking signout button you will be redirected to homepage 
