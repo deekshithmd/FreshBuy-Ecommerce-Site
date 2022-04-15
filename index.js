@@ -1,8 +1,9 @@
 const dark=document.querySelector(".dark");
-var slide = document.querySelector("#slider");
-var btn1 = document.querySelector("#btn1");
-var btn2 = document.querySelector("#btn2");
-var btn3 = document.querySelector("#btn3");
+const slide = document.querySelector("#slider");
+const btn=document.querySelector(".indicators")
+const btn1 = btn.querySelector("#btn1");
+const btn2 = btn.querySelector("#btn2");
+const btn3 = btn.querySelector("#btn3");
 
 if(localStorage.getItem("dark")==="dark-theme"){
     document.body.classList.add("dark-theme")
@@ -37,7 +38,6 @@ btn1.onclick = function(){
     btn1.classList.add("active");
     btn2.classList.remove("active");
     btn3.classList.remove("active");
-    btn4.classList.remove("active");
 }
 
 btn2.onclick = function(){
@@ -45,7 +45,6 @@ btn2.onclick = function(){
     btn2.classList.add("active");
     btn1.classList.remove("active");
     btn3.classList.remove("active");
-    btn4.classList.remove("active");
 }
 
 btn3.onclick = function(){
@@ -53,6 +52,5 @@ btn3.onclick = function(){
     btn3.classList.add("active");
     btn2.classList.remove("active");
     btn1.classList.remove("active");
-    btn4.classList.remove("active");
 }
 

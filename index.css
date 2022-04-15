@@ -14,7 +14,7 @@
     grid-area: nav-bar;
 }
 
-.hero-section{
+.hero-section{ 
     grid-area: hero-section;
     height: 20rem;
     display: flex;
